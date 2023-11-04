@@ -10,20 +10,20 @@ Template para aplicações web com NextJS.
 - [x] Limpeza de arquivos desnecessários
 - [x] class-variance-authority, clsx e tailwind-merge para facilitar a criação de variantes de componentes
 
-
 > **Nota:** Para melhor uso dessas libs com o intellisense do VSCode, instale o plugin [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) e adicione o seguinte ao seu `settings.json`:
->```json
->{ 
+>
+> ```json
+> {
 >   "tailwindCSS.experimental.classRegex": [
 >     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
 >     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
 >     ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
 >   ]
->}
+> }
 > ```
 
-- [ ] Configurações para testes
-- [ ] Configurações para deploy na Vercel
+- [x] Vitest com Testing Library (react, jest-dom e user-event)
 - [ ] Configurações para acesso a banco de dados
 - [ ] Configurações para autenticação
+- [ ] Configurações para deploy na Vercel
 - [ ] Configurações para internacionalização
