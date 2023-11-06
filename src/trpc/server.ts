@@ -1,9 +1,11 @@
+import "server-only";
+
 import simpleRouter from "./routes/simpleRouter";
 import { createContext, router } from "./trpc";
 
 export const trpcRouter = router({
   // create routes on path ./routes and add here to merge them
-  simpleRouter
+  simpleRouter,
 });
 
 // create a caller to be used on server side
