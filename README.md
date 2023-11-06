@@ -23,7 +23,5 @@ Template para aplicações web com NextJS.
 > ```
 
 - [x] Vitest com Testing Library (react, jest-dom e user-event)
-- [ ] Configurações para acesso a banco de dados
-- [ ] Configurações para autenticação
-- [ ] Configurações para deploy na Vercel
 - [ ] Configurações para internacionalização
+- [ ] Configurações para autenticação
