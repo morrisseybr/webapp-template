@@ -6,12 +6,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import SuperJSON from "superjson";
 import { trpc } from "@/trpc/client";
 
-function getBaseUrl() {
-  // if (typeof window !== "undefined") return "";
-  // if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  return `http://localhost:${process.env.PORT ?? 3000}`;
-}
-
 export default function TRPCProvider({
   children,
 }: {
@@ -23,10 +17,10 @@ export default function TRPCProvider({
       transformer: SuperJSON,
       links: [
         httpBatchLink({
-          url: `${getBaseUrl()}/api`,
+          url: "/api",
         }),
       ],
-    })
+    }),
   );
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>

@@ -1,10 +1,9 @@
-import { TRPCError, initTRPC } from "@trpc/server";
+import { initTRPC } from "@trpc/server";
 import SuperJSON from "superjson";
 
 // create a context to be accessed on every route
 export const createContext = async () => {
-  return {
-  };
+  return {};
 };
 
 // initialize trpc with superjson
