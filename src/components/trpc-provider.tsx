@@ -5,6 +5,7 @@ import { httpBatchLink } from "@trpc/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import SuperJSON from "superjson";
 import { trpc } from "@/trpc/client";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 export default function TRPCProvider({
   children,
@@ -24,7 +25,10 @@ export default function TRPCProvider({
   );
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+      <QueryClientProvider client={queryClient}>
+        {children}
+        <ReactQueryDevtools initialIsOpen />
+      </QueryClientProvider>
     </trpc.Provider>
   );
 }
