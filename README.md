@@ -22,6 +22,6 @@ Template para aplicações web com NextJS.
 > }
 > ```
 
-- [ ] Jest
+- [x] Vitest com Testing Library (react, jest-dom e user-event)
 - [ ] Configurações para internacionalização
 - [ ] Configurações para autenticação
