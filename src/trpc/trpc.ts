@@ -7,9 +7,10 @@ export const createContext = async () => {
 };
 
 // initialize trpc with superjson
-const t = initTRPC.context<typeof createContext>().create({
+export const t = initTRPC.context<typeof createContext>().create({
   transformer: SuperJSON,
 });
+
 
 // base router and procedure helpers
 export const router = t.router;
