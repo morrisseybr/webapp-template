@@ -1,4 +1,4 @@
-import { ID, IDModel } from "../models/values/ID";
+import { ID, IDModel } from "./ID";
 import { Model } from "./Model";
 import { Serializable } from "./Serializable";
 

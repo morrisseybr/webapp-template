@@ -1,4 +1,4 @@
-import { ID } from "../models/values/ID";
+import { ID } from "./ID";
 import { Database } from "./Database";
 import { Entity, EntityModel } from "./Entity";
 import { SerializableConstructor } from "./Serializable";
@@ -9,14 +9,15 @@ export abstract class Repository<
   C extends SerializableConstructor<M, E>,
 > {
   protected abstract readonly location: string;
+  
+  protected abstract readonly entityConstructor: C;
 
   protected readonly db: Database;
 
   constructor(db: Database) {
     this.db = db;
   }
-
-  abstract entityConstructor: C;
+  
   async newId(): Promise<ID> {
     const newId = new ID(await this.db.newId(this.location));
     return newId;

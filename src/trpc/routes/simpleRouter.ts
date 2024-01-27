@@ -1,6 +1,6 @@
 import { procedure, router } from "../trpc";
 import { HelloInputSchema } from "./schemas/simpleSchemas";
-import { SimpleController } from "@/controllers/simpleController";
+import { SimpleController } from "@/controllers/SimpleController";
 
 const simpleRouter = router({
   hello: procedure.input(HelloInputSchema).query((opts) => {
